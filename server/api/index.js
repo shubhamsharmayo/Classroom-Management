@@ -19,6 +19,10 @@ mongoose.connect(process.env.DATABASE_CON)
 .then(()=>console.log('database connected'))
 .catch((err)=>console.error(err))
 
+app.get('/',(req,res)=>{
+  res.json({message:"hello"})
+})
+
 app.use('/auth',authRoutes)
 app.use('/principal',principalRoutes)
 app.use('/teachers', teachersRoutes)
