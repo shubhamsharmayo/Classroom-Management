@@ -1,9 +1,9 @@
 import express from 'express'
 import mongoose from 'mongoose'
-import authRoutes from './routes/auth.js';
-import principalRoutes from './routes/principal.js'
-import teachersRoutes from './routes/teachers.js'
-import studentRoutes from './routes/student.js'
+import authRoutes from '../routes/auth.js';
+import principalRoutes from '../routes/principal.js'
+import teachersRoutes from '../routes/teachers.js'
+import studentRoutes from '../routes/student.js'
 import cors from 'cors'
 import dotenv from 'dotenv'
 dotenv.config()
