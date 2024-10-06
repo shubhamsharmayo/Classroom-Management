@@ -12,6 +12,10 @@ router.use(bodyParser.json());
 
 router.use(cors());
 
+router.get('/',(req,res)=>{
+  res.json({message:"hello"})
+})
+
 router.post("/login", async (req, res) => {
   
   const email = req.body.email
