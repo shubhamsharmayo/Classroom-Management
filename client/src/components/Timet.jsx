@@ -66,6 +66,7 @@ const TimeDashboard = () => {
                         <thead>
                             <tr>
                                 <th>Classroom ID</th>
+                                <th>Days</th>
                                 <th>Subject</th>
                                 <th>Start Time</th>
                                 <th>End Time</th>
@@ -76,6 +77,11 @@ const TimeDashboard = () => {
                             {timetable.map((item) => (
                                 <tr key={item._id}>
                                     <td>{item.classroomID}</td>
+                                    <td>
+                                        {item.days.map((element, idx) => (
+                                            <span key={idx}>{element}<br /></span>
+                                        ))}
+                                    </td>
                                     <td>{item.subject}</td>
                                     <td>{item.startTime}</td>
                                     <td>{item.endTime}</td>
