@@ -1,0 +1,185 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Principal Dashboard container */
+.principaldash {
+    width: 100%;
+    /* max-width: 1200px; */
+    
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(255, 255, 255, 0.795); */
+}
+
+.principaldash h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.plinks {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plinks a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #e7f9ed;
+    transition: background-color 0.3s ease;
+}
+
+.plinks a:hover {
+    background-color: #c3e8d2;
+}
+
+/* Table styling */
+.classlist {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.classlist th, .classlist td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.classlist th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+}
+
+.classlist tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.classlist tr:hover {
+    background-color: #cabd05;
+}
+
+.classlist td button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.classlist td button:hover {
+    background-color: #45a049;
+}
+.plinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Loader */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Edit Form Styling */
+.edit-form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.edit-form label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.edit-form input,
+.edit-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.edit-form button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-form button:hover {
+    background-color: #45a049;
+}
+
+.edit-form button[type="button"] {
+    background-color: #ccc;
+}
+
+.edit-form button[type="button"]:hover {
+    background-color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .principaldash {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .classlist th, .classlist td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .edit-form input,
+    .edit-form select,
+    .edit-form button {
+        font-size: 14px;
+    }
+}

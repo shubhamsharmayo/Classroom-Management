@@ -1,0 +1,76 @@
+.studentdash {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.studentdash h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.studentdash .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    height: 30px;
+    width: auto;
+    background-color: white;
+    
+}
+
+.studentdash .nav-link:hover {
+    background-color: rgb(194, 194, 194);
+}
+
+.studenttimetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.studenttimetable th, .studenttimetable td {
+    border: 0.1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.studenttimetable th {
+    background-color: #222222;
+    font-weight: bold;
+}
+
+.studenttimetable tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.studenttimetable tr:hover {
+    background-color: #95a000;
+}
+
+.studenttimetable button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.studenttimetable button:hover {
+    background-color: #d32f2f;
+}
+
+.studenttimetable td {
+    border: 1px solid black;
+}

@@ -1,0 +1,123 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+
+/* Container styling */
+.timetable-container {
+    width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 30%;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Form styling */
+.timetable-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-labels {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-inputs {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #000000;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-inputs:focus {
+    border-color: #4CAF50;
+}
+
+/* Select input styling */
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #4CAF50;
+}
+
+/* Submit button styling */
+.submit-buttons {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-buttons:hover {
+    background-color: #45a049;
+}
+
+.submit-buttons:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+/* Loader and error messages */
+p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timetable-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 22px;
+    }
+
+    .form-inputs,
+    select,
+    .submit-buttons {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,146 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+   
+    min-height: 100vh;
+  }
+  
+  /* Teacher Dashboard styling */
+  .teacherdash {
+    width: 100%;
+    max-width: 1200px;
+    margin:  auto;
+    padding: 20px;
+    backdrop-filter: blur(3px);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teacherdash h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #45a049;
+  }
+  
+  /* Timetable table styling */
+  .timetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .timetable th,
+  .timetable td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  .timetable th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .timetable tr:nth-child(even) {
+    background-color: transparent;
+  }
+  
+  .timetable tr:hover {
+    background-color: #fffb008f;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+  }
+  
+  /* Edit form */
+  .edit-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    position: relative;
+    z-index: 55;
+  }
+  
+  .edit-form h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .edit-form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+  }
+  
+  .edit-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Loading spinner (just for fun) */
+  p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+  }
+  .stuopt{
+    color: black;
+  }
+  .stuopt:focus{
+    color: white;
+  }
