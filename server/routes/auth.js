@@ -12,7 +12,7 @@ router.use(bodyParser.json());
 
 router.use(cors());
 
-router.get('/',(req,res)=>{
+router.get('/login',(req,res)=>{
   res.json({message:"hello"})
 })
 

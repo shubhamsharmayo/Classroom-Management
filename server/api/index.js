@@ -14,6 +14,7 @@ const port = process.env.PORT
 app.use(express.json());
 
 app.use(cors())
+
 mongoose.connect(process.env.DATABASE_CON)
 .then(()=>console.log('database connected'))
 .catch((err)=>console.error(err))
