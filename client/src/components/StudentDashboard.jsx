@@ -13,7 +13,7 @@ const StudentDashboard = () => {
         const fetchData = async () => {
             setLoader(true);
             try {
-                const response = await fetch('http://localhost:3000/student/studenttimetable', {
+                const response = await fetch('https://classroom-wheat.vercel.app/student/studenttimetable', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const StudentDashboard = () => {
 
             try {
 
-                let retriveresponse = await fetch("http://localhost:3000/student/student", {
+                let retriveresponse = await fetch("https://classroom-wheat.vercel.app/student/student", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

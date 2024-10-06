@@ -11,7 +11,7 @@ const Timetable = () => {
 
     const onSubmit = async (data) => {
         try {
-            let submit = await fetch('http://localhost:3000/teachers/timetable', {
+            let submit = await fetch('https://classroom-wheat.vercel.app/teachers/timetable', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Timetable = () => {
         const classidfetch = async()=>{
             setLoader(true)
             try{
-                let fetchdata = await fetch("http://localhost:3000/teachers/classidfetch")
+                let fetchdata = await fetch("https://classroom-wheat.vercel.app/teachers/classidfetch")
                 let response = await fetchdata.json()
                 console.log(response)
                 setclassroomlist(response)

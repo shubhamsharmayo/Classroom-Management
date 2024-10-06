@@ -20,7 +20,7 @@ const PrincipalDashboard = () => {
         const fetchData = async () => {
             setLoader(true);
             try {
-                const response = await axios.get('http://localhost:3000/principal/classroomdetails');
+                const response = await axios.get('https://classroom-wheat.vercel.app/principal/classroomdetails');
                 response.data.forEach(classroom => append(classroom));
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -33,7 +33,7 @@ const PrincipalDashboard = () => {
             setLoader(true)
             try{
 
-                let resdata =  await fetch("http://localhost:3000/principal/teachername")
+                let resdata =  await fetch("https://classroom-wheat.vercel.app/principal/teachername")
                   let datalog = await resdata.json()
                   setteacherdata(datalog)
             }catch(error){
@@ -50,7 +50,7 @@ const PrincipalDashboard = () => {
         
         try{
 
-            let studentresponse = await fetch("http://localhost:3000/principal/studentname")
+            let studentresponse = await fetch("https://classroom-wheat.vercel.app/principal/studentname")
             let resp = await studentresponse.json()
             // console.log(res)
             setstudent(resp)
@@ -66,7 +66,7 @@ const PrincipalDashboard = () => {
 
     const handleDelete = async (id, index) => {
         try {
-            await axios.delete(`http://localhost:3000/principal/classroom/${id}`);
+            await axios.delete(`https://classroom-wheat.vercel.app/principal/classroom/${id}`);
             remove(index);
         } catch (error) {
             console.error('Error deleting classroom:', error);
@@ -80,7 +80,7 @@ const PrincipalDashboard = () => {
 
     const handleUpdate = async (data) => {
         try {
-            const response = await axios.put(`http://localhost:3000/principal/classrooms/${data._id}`,data);
+            const response = await axios.put(`https://classroom-wheat.vercel.app/principal/classrooms/${data._id}`,data);
             update(isEditing, response.data);
             setIsEditing(null);
             setEditFormData({});

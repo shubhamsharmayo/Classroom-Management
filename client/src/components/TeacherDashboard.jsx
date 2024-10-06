@@ -20,7 +20,7 @@ const TeacherDashboard = () => {
         
         try{
 
-            let timetableresponse = await fetch("http://localhost:3000/teachers/assignclass", {method:"POST",headers: {
+            let timetableresponse = await fetch("https://classroom-wheat.vercel.app/teachers/assignclass", {method:"POST",headers: {
                 "Content-Type": "application/json", 
               }, body: JSON.stringify({name:namedata})})
             let resp = await timetableresponse.json()
@@ -45,7 +45,7 @@ const TeacherDashboard = () => {
 
     const handleUpdate = async (data) => {
         try {
-            await axios.put(`http://localhost:3000/teachers/studentlist/${data._id}`, data);
+            await axios.put(`https://classroom-wheat.vercel.app/teachers/studentlist/${data._id}`, data);
             setstudentupdate(students.map(item => item._id === data._id ? data : item));
             setIsEditing(null);
             setEditData({});
@@ -61,7 +61,7 @@ const TeacherDashboard = () => {
         
         try{
 
-            let studentresponse = await fetch("http://localhost:3000/principal/studentname")
+            let studentresponse = await fetch("https://classroom-wheat.vercel.app/principal/studentname")
             let resp = await studentresponse.json()
             // console.log(res)
             setstudents(resp)

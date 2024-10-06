@@ -11,7 +11,7 @@ const CreateClassroom = () => {
 
     const onSubmit = async (data) => {
         try {
-            let submit = await fetch('http://localhost:3000/principal/classroom', {
+            let submit = await fetch('https://classroom-wheat.vercel.app/principal/classroom', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -36,7 +36,7 @@ const CreateClassroom = () => {
             setLoader(true);
             try{
 
-                let dataresponse = await fetch("http://localhost:3000/principal/teachername")
+                let dataresponse = await fetch("https://classroom-wheat.vercel.app/principal/teachername")
                 let res = await dataresponse.json()
                 // console.log(res)
                 setteachername(res)
@@ -54,7 +54,7 @@ const CreateClassroom = () => {
         
         try{
 
-            let studentresponse = await fetch("http://localhost:3000/principal/studentname")
+            let studentresponse = await fetch("https://classroom-wheat.vercel.app/principal/studentname")
             let resp = await studentresponse.json()
             // console.log(res)
             setstudent(resp)
@@ -73,7 +73,7 @@ const CreateClassroom = () => {
         <div className="create-classroom-container">
             <h2 className="form-title">Create Classroom</h2>
             {warning=="class already exist"?<div className='error'>{warning}</div>:<div className='success'>{warning}</div>}
-            <form onSubmit={handleSubmit(onSubmit)} className="">
+            <form onSubmit={handleSubmit(onSubmit)} className="create-classroom-form">
                 
                 <table className="form-table">
                     <tbody>

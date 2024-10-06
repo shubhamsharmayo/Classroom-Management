@@ -15,7 +15,7 @@ const TimeDashboard = () => {
         const fetchData = async () => {
             setLoader(true);
             try {
-                const response = await axios.get('http://localhost:3000/principal/timetabledashboard');
+                const response = await axios.get('https://classroom-wheat.vercel.app/principal/timetabledashboard');
                 setTimetable(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -28,7 +28,7 @@ const TimeDashboard = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/teachers/timetable/${id}`);
+            await axios.delete(`https://classroom-wheat.vercel.app/teachers/timetable/${id}`);
             setTimetable(timetable.filter(timetables => timetables._id !== id));
         } catch (error) {
             console.error('Error deleting timetable:', error);
@@ -43,7 +43,7 @@ const TimeDashboard = () => {
 
     const handleUpdate = async (data) => {
         try {
-            await axios.put(`http://localhost:3000/teachers/timetable/${data._id}`, data);
+            await axios.put(`https://classroom-wheat.vercel.app/teachers/timetable/${data._id}`, data);
             setTimetable(timetable.map(item => item._id === data._id ? data : item));
             setIsEditing(null);
             setEditData({});
