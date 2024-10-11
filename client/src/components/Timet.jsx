@@ -51,7 +51,7 @@ const TimeDashboard = () => {
             console.error('Error updating timetable:', error);
         }
     };
-
+    // console.log(timetable)
     return (
         <div className='teacherdash'>
             <h2>Principal Dashboard</h2>

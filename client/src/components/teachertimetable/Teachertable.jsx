@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import './teachertable.css';
 
 const Teachertable = () => {
-    const [timetable, setTimetable] = useState([]);
+    const [timetable, settimetable] = useState([]);
     const [loader, setLoader] = useState(true);
     const [isEditing, setIsEditing] = useState(null);
     const [editData, setEditData] = useState({});
@@ -15,8 +15,8 @@ const Teachertable = () => {
         const fetchData = async () => {
             setLoader(true);
             try {
-                const response = await axios.get('http://localhost:3000/teachers/teacherdashboard');
-                setTimetable(response.data);
+                const response = await axios.get('https://classroom-wheat.vercel.app/teachers/teacherdashboard');
+                settimetable(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             } finally {
@@ -54,7 +54,7 @@ const Teachertable = () => {
             console.error('Error updating timetable:', error);
         }
     };
-
+console.log(timetable)
     return (
         <div className='teacherdash'>
             <h2>Teacher Dashboard</h2>
